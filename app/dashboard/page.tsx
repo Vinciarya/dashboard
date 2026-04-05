@@ -1,11 +1,10 @@
 "use client"
 
+import dynamic from "next/dynamic"
+
 import { AppSidebar } from "@/components/app-sidebar"
-import { ChartAreaInteractive } from "@/components/chart-area-interactive"
-import { DataTable } from "@/components/data-table"
 import { SectionCards } from "@/components/section-cards"
 import { SiteHeader } from "@/components/site-header"
-import { SpendingDonutChart } from "@/components/spending-donut-chart"
 import { InsightsSection } from "@/components/insights-section"
 import {
   SidebarInset,
@@ -13,6 +12,10 @@ import {
 } from "@/components/ui/sidebar"
 import { FinanceProvider } from "@/lib/finance-context"
 import { Toaster } from "@/components/ui/sonner"
+
+const ChartAreaInteractive = dynamic(() => import("@/components/chart-area-interactive").then((mod) => mod.ChartAreaInteractive), { ssr: false })
+const SpendingDonutChart = dynamic(() => import("@/components/spending-donut-chart").then((mod) => mod.SpendingDonutChart), { ssr: false })
+const DataTable = dynamic(() => import("@/components/data-table").then((mod) => mod.DataTable), { ssr: false })
 
 export default function Page() {
   return (

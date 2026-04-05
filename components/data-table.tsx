@@ -340,7 +340,7 @@ export function DataTable() {
       cell: ({ row }) => (
         <Badge
           variant={row.original.type === "income" ? "default" : "secondary"}
-          className={`capitalize px-2 text-xs ${row.original.type === "income" ? "bg-emerald-500/15 text-emerald-700 dark:text-emerald-400 border-emerald-300/50 dark:border-emerald-700/50" : "bg-red-500/10 text-red-600 dark:text-red-400 border-red-300/50 dark:border-red-700/50"}`}
+          className={`capitalize px-2 text-xs ${row.original.type === "income" ? "bg-emerald-500/15 text-emerald-800 dark:text-emerald-200 border-emerald-300/50 dark:border-emerald-700/50" : "bg-red-500/10 text-red-800 dark:text-red-200 border-red-300/50 dark:border-red-700/50"}`}
         >
           {row.original.type}
         </Badge>
@@ -473,7 +473,7 @@ export function DataTable() {
               setFilters({ type: tab })
             }}
           >
-            <SelectTrigger className="flex w-fit @4xl/main:hidden" size="sm">
+            <SelectTrigger aria-label="Filter by type" className="flex w-fit @4xl/main:hidden" size="sm">
               <SelectValue placeholder="Filter type" />
             </SelectTrigger>
             <SelectContent>
@@ -501,7 +501,7 @@ export function DataTable() {
               value={filters.month || "all"}
               onValueChange={(v) => setFilters({ month: v === "all" ? "" : v })}
             >
-              <SelectTrigger size="sm" className="w-36">
+              <SelectTrigger aria-label="Filter by month" size="sm" className="w-36">
                 <SelectValue placeholder="Month" />
               </SelectTrigger>
               <SelectContent>
@@ -519,7 +519,7 @@ export function DataTable() {
               value={filters.category || "all"}
               onValueChange={(v) => setFilters({ category: v === "all" ? "" : v })}
             >
-              <SelectTrigger size="sm" className="w-36 hidden lg:flex">
+              <SelectTrigger aria-label="Filter by category" size="sm" className="w-36 hidden lg:flex">
                 <SelectValue placeholder="Category" />
               </SelectTrigger>
               <SelectContent>

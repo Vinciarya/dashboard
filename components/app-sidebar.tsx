@@ -95,7 +95,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
             Current Role
           </Label>
           <Select value={role} onValueChange={(v) => setRole(v as Role)}>
-            <SelectTrigger className="w-full h-8 text-sm" id="role-switcher">
+            <SelectTrigger aria-label="Switch Role" className="w-full h-8 text-sm" id="role-switcher">
               <div className="flex items-center gap-2">
                 {role === "admin" ? (
                   <IconShieldCheck className="size-3.5 text-primary" />
