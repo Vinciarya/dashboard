@@ -16,20 +16,46 @@ An ultra-modern, lightning-fast finance management platform delivering spatial, 
 
 ![Finance Dashboard Preview](public/dashboard-preview.png)
 
-## ✨ Features Implemented
+## 📖 Overview of Approach
 
-The following features were successfully implemented and integrated into the ecosystem:
+The core approach behind this application was to construct a highly interactive, front-end-first Finance Dashboard. We focused heavily on extracting raw functional requirements (managing and viewing transactions) and wrapping them in an advanced, premium UI. To achieve this prototype swiftly and effectively, we utilized a mock data layer managed by the native React Context API. This approach simulates real API latency and CRUD operations, guaranteeing the application is perfectly primed to be attached to a Node/GraphQL backend later, without necessitating UI rework.
 
-- ✅ **Dashboard Overview with Summary Cards** (High-level glanceable metrics with glassmorphic backing).
-- ✅ **Time Based Visualization** (Interactive balance trend charts highlighting trajectory).
-- ✅ **Categorical Visualization** (Vibrant, accessible spending breakdowns).
-- ✅ **Transaction List with Details** (Deep-dive interface for exploring financial logs).
-- ✅ **Transaction Filtering** (Real-time facet and date-range extraction).
-- ✅ **Transaction Sorting or Search** (Immediate Tanstack Table powered queries).
-- ✅ **Role Based UI (Viewer and Admin)** (Granular permission emulation with smooth contextual transition).
-- ✅ **Insights Section** (Automated logic breaking down spending trends with targeted advice components).
-- ✅ **State Management** (A cleanly localized Context API framework, negating external setup latency).
-- ✅ **Responsive Design** (Fluid interface from 300px mobile widths up to 4K Ultrawide spans).
+---
+
+## 🚀 Setup Instructions
+
+Running the project locally is incredibly straightforward built upon Node.js. 
+
+1. **Clone the repository** (if you haven't already):
+   ```bash
+   git clone <repository-url>
+   cd dashboard
+   ```
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+3. **Start the development server**:
+   ```bash
+   npm run dev
+   ```
+4. **Access the application**: Open your browser and navigate to [http://localhost:3000](http://localhost:3000).
+
+---
+
+## ✨ Explanation of Features
+
+The dashboard ecosystem implements the following functional tools modeled around a modern personal finance use-case:
+
+- ✅ **Dashboard Overview with Summary Cards:** High-level metric cards calculating total balance, income, expenses, and savings rate. These feature dynamic comparative text (e.g., "Down vs last month") providing instant financial context.
+- ✅ **Time-Based Visualization:** A robust, interactive area chart plotting Income vs. Expenses across time to accurately visualize macro-growth trajectories.
+- ✅ **Categorical Visualization:** A vibrant spending breakdown donut chart highlighting proportions of category-based expenditures at a glance.
+- ✅ **Transaction List with Details:** A fully-featured list view containing historical mock transaction data, allowing users to dive deep into financial movements.
+- ✅ **Transaction Filtering & Sorting:** Integrated client-side table functionalities enabling instant column-level sorting, categorical facet filtering, and global search.
+- ✅ **Role-Based UI (Viewer and Admin):** A top-level UI toggle simulating permission boundaries—locking out table-editing features when simulating the 'Viewer' role.
+- ✅ **Insights Section:** Dynamic engine generating automated notifications, budgeting warnings, and celebratory streaks based on structural mock spending ratios.
+- ✅ **State Management via Context:** All dynamic data (mock transactions, theme states, role bindings) are securely bound using localized Context wrappers to sidestep arbitrary Redux/Zustand installation bloat.
+- ✅ **Responsive Design:** A fluid Tailwind layout tailored strictly to optimize readability on mobile endpoints while spanning appropriately on 4K ultrawide displays.
 
 ---
 
